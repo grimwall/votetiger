@@ -18,7 +18,7 @@ app.logger.setLevel(logging.INFO)
 
 def get_redis():
     if not hasattr(g, 'redis'):
-        g.redis = Redis(host="tiger-redis.redis.cache.windows.net", port=6379, db=0, socket_timeout=5)
+        g.redis = Redis(host="tiger-redis.redis.cache.windows.net", port=6379, password="CNQov5TmTVOU6zTKSfcQS6saFdkWwaqS9AzCaHfFDqg=", db=0, socket_timeout=5)
     return g.redis
 
 @app.route("/", methods=['POST','GET'])
